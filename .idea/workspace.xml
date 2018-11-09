@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ae5f998-e622-4aef-9b11-e1e688596fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bilibili/templates/bilibili/uploadVideo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SFIproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SFIproject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="2ae5f998-e622-4aef-9b11-e1e688596fe7" name="Default Changelist" comment="working on backstage right now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFIproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SFIproject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFIproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SFIproject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilibili/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bilibili/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilibili/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/bilibili/static/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilibili/templates/bilibili/backstage.html" beforeDir="false" afterPath="$PROJECT_DIR$/bilibili/templates/bilibili/backstage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilibili/templates/bilibili/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bilibili/templates/bilibili/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilibili/templates/bilibili/navbarBase.html" beforeDir="false" afterPath="$PROJECT_DIR$/bilibili/templates/bilibili/navbarBase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilibili/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bilibili/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +80,7 @@
           <entry key="bilibili_bilibilifile" value="3" />
           <entry key="bilibili_bilibiliuser" value="5" />
           <entry key="bilibili_user" value="4" />
-          <entry key="css" value="5" />
+          <entry key="css" value="6" />
           <entry key="html" value="19" />
           <entry key="py" value="26" />
           <entry key="sql" value="4" />
@@ -102,7 +88,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="5" />
+          <entry key="CSS" value="6" />
           <entry key="Database Element" value="12" />
           <entry key="HTML" value="19" />
           <entry key="Python" value="26" />
@@ -115,14 +101,14 @@
           <entry key="css" value="382" />
           <entry key="html" value="4078" />
           <entry key="py" value="5205" />
-          <entry key="txt" value="42" />
+          <entry key="txt" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="382" />
           <entry key="HTML" value="4078" />
-          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="PLAIN_TEXT" value="76" />
           <entry key="Python" value="5205" />
         </counts>
       </usages-collector>
@@ -174,15 +160,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://1d2436d8-0da7-419e-99e7-36b550f52c7d/schema/main/table/bilibili_bilibilifile">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bilibili/templates/bilibili/backstage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -197,7 +174,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bilibili/static/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
+            <state relative-caret-position="82">
               <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
             </state>
           </provider>
@@ -425,10 +402,24 @@
       <option name="project" value="LOCAL" />
       <updated>1538271418714</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="working on backstage right now">
+      <created>1541746109238</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541746109238</updated>
+    </task>
+    <task id="LOCAL-00003" summary="working on backstage right now">
+      <created>1541746258491</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541746258491</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -440,7 +431,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1360" height="670" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49723756" weight="0.27439025" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49723756" visible="true" weight="0.27439025" />
       <window_info id="Structure" order="1" sideWeight="0.50276244" side_tool="true" weight="0.2663126" />
       <window_info id="Favorites" order="2" sideWeight="0.50092083" side_tool="true" weight="0.26251897" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -449,13 +440,13 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3296501" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992378" weight="0.3296501" />
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49924126" weight="0.35174954" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3296501" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.6095764" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3296501" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007587" side_tool="true" weight="0.005524862" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007622" side_tool="true" weight="0.3296501" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3296501" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32844037" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32780847" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3296501" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -492,6 +483,7 @@
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_DETAILS" value="true" />
     <option name="COLUMN_ORDER">
       <list>
         <option value="0" />
@@ -506,7 +498,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Studying django middleware currently" />
-    <option name="LAST_COMMIT_MESSAGE" value="Studying django middleware currently" />
+    <MESSAGE value="working on backstage right now" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on backstage right now" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/687431be-55ae-4c77-9eb5-9ec823882d2a/console.sql">
@@ -649,7 +642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bilibili/static/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="82">
           <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
         </state>
       </provider>
