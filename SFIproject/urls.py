@@ -23,5 +23,8 @@ urlpatterns = [
     path('', views.index),
     path('login/', views.login),
     path('register', views.register),
-    path('backstage/', views.backstage)
+    path('backstage/', views.backstage),
+    path('logout/', views.logout_view),
+    path('uploadvideos/', views.uploadvideos),
+    path('transfer/', views.transfer_station)
 ]

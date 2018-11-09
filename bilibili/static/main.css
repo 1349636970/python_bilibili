@@ -1,7 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #login-form{
     width: 50%;
 }
 
 body,html {
     height: 100%;
+}
+
+#submit {
+    width: 15%;
+}
+
+#backstage-menu {
+    margin-top: 66px;
+    height: 100%;
+}
+
+#backstage-menu-list a{
+    border:none;
+    border-bottom: 2px blue solid;
+    margin: 0 10px 0 0;
+    width: auto;
+}
+
+#backstage-top-image {
+    height: 30%;
+}
+
+#search-icon {
+    position: relative;
+    left: -35px;
 }

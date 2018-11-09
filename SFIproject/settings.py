@@ -120,3 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = '../videos'
+
+# Other setting
+AUTH_USER_MODEL = 'bilibili.BilibiliUser'
+# Authentication backends
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+    )

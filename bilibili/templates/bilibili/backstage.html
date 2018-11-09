@@ -5,11 +5,26 @@
     <link rel="stylesheet" href="{% static "main.css" %}">
 {% endblock %}
 {% block body %}
-    <div class="container">
-        <div class="row">
-            <ul class="list-group">
-                <li class="list-group-item">Main page</li>
-            </ul>
+    <div class="container" id='backstage-menu'>
+        <img class="w-100" src="{% static "images/gray.png" %}" alt="replace pictures" id="backstage-top-image">
+        <div class="row justify-content-center">
+            <div class="list-group flex-row" id="backstage-menu-list">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <img style='width: 24px; height: 24px;' src="{% static "images/home.svg" %}" alt="home icon">Main page
+                </a>
+                <a href="#" class="list-group-item list-group-item-action"><img src="{% static "images/favorite.svg" %}"
+                                                                                alt="heart icon">Favorite</a>
+                <a href="#" class="list-group-item list-group-item-action"><img src="{% static "images/video.svg" %}"
+                                                                                alt="video icon">Your
+                    video</a>
+                <a href="#" class="list-group-item list-group-item-action"><img src="{% static "images/channel.svg" %}"
+                                                                                alt="home icon">Channel</a>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <a href="#"><img src="{% static "images/search.svg" %}" alt="search icon" id="search-icon"></a>
+            </form>
         </div>
+
     </div>
 {% endblock %}
