@@ -1,4 +1,5 @@
 import logging
+import re
 import uuid
 
 from django.contrib import auth
@@ -35,8 +36,15 @@ def register(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         email = request.POST.get('email')
-        BilibiliUser.objects.create_user(username, email, password)
-        return redirect('backstage/')
+        username_length = len(username)
+        password_length = len(password)
+        if username_length < 8 or password_length < 8 or re.match("^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$",
+                                                                  email) is None:
+            return render(request, "bilibili/register.html",
+                          {"title": "Welcome to register", "path": "/register", "type_page": "register"})
+        else:
+            BilibiliUser.objects.create_user(username, email, password)
+            return redirect('backstage/')
     else:
         return render(request, "bilibili/register.html",
                       {"title": "Welcome to register", "path": "/register", "type_page": "register"})
@@ -44,7 +52,9 @@ def register(request):
 
 def backstage(request):
     if request.user.is_authenticated:
-        return render(request, "bilibili/backstage.html")
+        return render(request, "bilibili/backstage.html", {
+            "type_page": "backstage_main"
+        })
     else:
         return redirect('/login')
 
@@ -74,3 +84,9 @@ def transfer_station(request):
                          'uuid': video_uuid, 'upload': video_files}
     models.BilibiliFile.objects.create(**dir_bilibili_file)
     return HttpResponse("success")
+
+
+def backstage_favorite(request):
+    return render(request, "bilibili/backstage.html", {
+        "type_page": "backstage_favorite"
+    })

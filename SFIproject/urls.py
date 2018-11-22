@@ -26,5 +26,6 @@ urlpatterns = [
     path('backstage/', views.backstage),
     path('logout/', views.logout_view),
     path('uploadvideos/', views.uploadvideos),
-    path('transfer/', views.transfer_station)
+    path('transfer/', views.transfer_station),
+    path('backstage/favorite/', views.backstage_favorite)
 ]

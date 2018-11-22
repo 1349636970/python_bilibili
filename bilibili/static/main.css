@@ -3,12 +3,13 @@
     padding: 0;
 }
 
-#login-form{
+#login-form {
     width: 50%;
 }
 
-body,html {
+body, html {
     height: 100%;
+    background: #F3F5F7;
 }
 
 #submit {
@@ -20,18 +21,115 @@ body,html {
     height: 100%;
 }
 
-#backstage-menu-list a{
-    border:none;
-    border-bottom: 2px blue solid;
+#backstage-menu-list-row {
+    background: white;
+}
+
+#backstage-menu-list a {
+    border: none;
     margin: 0 10px 0 0;
-    width: auto;
+    width: 120px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+#backstage-menu-list a img {
+    display: inline;
+}
+
+#backstage-menu-list a p {
+    display: inline;
+}
+
+#backstage-menu-list a span {
+    position: relative;
+    top: 12px;
+    display: block;
+    content: "";
+    border-bottom: 2px solid blue;
+    transform: scaleX(0);
+    transition: transform 500ms;
 }
 
 #backstage-top-image {
     height: 30%;
+    text-align: center;
 }
 
 #search-icon {
     position: relative;
     left: -35px;
 }
+
+#backstage-section {
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+#backstage-section-video {
+    background: white;
+}
+
+#backstage-section-info {
+    background: white;
+    flex: 0 0 40.333333%;
+    max-width: 40.333333%;
+    margin-left: 15px;
+}
+
+#top-video-type li {
+    border: none;
+    padding: 0;
+    margin: 15px 30px 0 0;
+    cursor: pointer;
+}
+
+#top-video-type p {
+    margin-bottom: 0;
+}
+
+#top-video-type li:nth-of-type(1) {
+    width: 105px;
+}
+
+#top-video-type li span {
+    display: block;
+    border: 1px solid blue;
+    position: relative;
+    left: 0;
+    transition: width 250ms, left 500ms;
+}
+
+#top-video-type .active {
+    color: blue;
+    background: none;
+}
+
+#top-video hr {
+    margin-top: 0;
+}
+
+#top-video-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 333px;
+    height: 150px;
+    border: gray dashed 2px;
+    cursor: pointer;
+}
+
+#my-video {
+    height: 120px;
+}
+
+#top-video-upload:hover {
+    border: blue dashed 2px;
+    color: purple;
+}
+
+#backstage-menu-list a:hover span {
+    transform: scaleX(1)
+}
+

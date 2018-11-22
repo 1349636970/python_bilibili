@@ -3,28 +3,80 @@
 {% load static %}
 {% block resouces %}
     <link rel="stylesheet" href="{% static "main.css" %}">
+    <script src="{% static "backstage.js" %}"></script>
 {% endblock %}
 {% block body %}
     <div class="container" id='backstage-menu'>
         <img class="w-100" src="{% static "images/gray.png" %}" alt="replace pictures" id="backstage-top-image">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="backstage-menu-list-row">
             <div class="list-group flex-row" id="backstage-menu-list">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <img style='width: 24px; height: 24px;' src="{% static "images/home.svg" %}" alt="home icon">Main page
+                <a href="/backstage" class="list-group-item list-group-item-action">
+                    <img style='width: 24px; height: 24px;' src="{% static "images/home.svg" %}" alt="home icon">
+                    <p>Main page</p>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action"><img src="{% static "images/favorite.svg" %}"
-                                                                                alt="heart icon">Favorite</a>
-                <a href="#" class="list-group-item list-group-item-action"><img src="{% static "images/video.svg" %}"
-                                                                                alt="video icon">Your
-                    video</a>
-                <a href="#" class="list-group-item list-group-item-action"><img src="{% static "images/channel.svg" %}"
-                                                                                alt="home icon">Channel</a>
+                <a href="/backstage/favorite" class="list-group-item list-group-item-action">
+                    <img src="{% static "images/favorite.svg" %}" alt="heart icon">
+                    <p>Favorite</p></a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <img src="{% static "images/video.svg" %}" alt="video icon">
+                    <p>Your video</p></a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <img src="{% static "images/channel.svg" %}" alt="home icon">
+                    <p>Channel</p></a>
             </div>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <a href="#"><img src="{% static "images/search.svg" %}" alt="search icon" id="search-icon"></a>
             </form>
         </div>
-
+        {% if type_page == "backstage_main" %}
+            <div class="row" id="backstage-section">
+                <div class="col-7" id="backstage-section-video">
+                    <div id="top-video">
+                        <ul class="list-group flex-row" id="top-video-type">
+                            <li class="list-group-item active">
+                                <p>My fan will see</p>
+                                <span></span>
+                            </li>
+                            <li class="list-group-item">
+                                <p>My guest will see</p>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div id="top-video-upload">
+                            <p>Set up your top video for your fan</p>
+                            <p class="d-none">Set up your masterpiece video for your guest</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="my-video" class="d-flex align-items-center">
+                        <h3>My video</h3>
+                    </div>
+                    <hr>
+                    <div id="my-channel">
+                        <h3>My channel</h3>
+                        <button class="btn btn-primary d-block mx-auto mb-3">Create channel</button>
+                    </div>
+                </div>
+                <div class="col-4" id="backstage-section-info">
+                    <p class="mt-3">Announcement</p>
+                    <hr>
+                    <textarea placeholder="Edit your announcement" name="announcement" cols="30" rows="10"
+                              style="resize: none"></textarea>
+                    <hr>
+                    {#                personal info#}
+                </div>
+            </div>
+        {% endif %}
+        {% if type_page == "backstage_favorite" %}
+            <div class="row mt-3 bg-white" id="backstage-favorite">
+                <div class="col-3" id="favorite-folder-list">
+                    <p class="d-inline">Video collection</p>
+                    <img src="{% static "images/add_circle.svg" %}" alt="add_circle" class="d-inline ml-5 btn">
+                </div>
+                <div class="col-9" id="favorite-videos"></div>
+            </div>
+        {% endif %}
     </div>
+
 {% endblock %}
