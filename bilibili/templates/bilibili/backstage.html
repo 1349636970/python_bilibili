@@ -1,6 +1,7 @@
 {% extends "bilibili/navbarBase.html" %}
 {% block title %}Personal space{% endblock %}
 {% load static %}
+{% static "" as baseURL %}
 {% block resouces %}
     <link rel="stylesheet" href="{% static "main.css" %}">
     <script src="{% static "backstage.js" %}"></script>
@@ -17,10 +18,10 @@
                 <a href="/backstage/favorite" class="list-group-item list-group-item-action">
                     <img src="{% static "images/favorite.svg" %}" alt="heart icon">
                     <p>Favorite</p></a>
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="/backstage/myvideo" class="list-group-item list-group-item-action">
                     <img src="{% static "images/video.svg" %}" alt="video icon">
                     <p>Your video</p></a>
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="/backstage/mychannel" class="list-group-item list-group-item-action">
                     <img src="{% static "images/channel.svg" %}" alt="home icon">
                     <p>Channel</p></a>
             </div>
@@ -49,8 +50,21 @@
                         </div>
                     </div>
                     <hr>
-                    <div id="my-video" class="d-flex align-items-center">
-                        <h3>My video</h3>
+                    <div id="my-video" class="row align-items-center">
+                        <h3 class="col-3">My video</h3>
+                        <div class="row col-9 justify-content-center" id="my-video-container">
+                            {% for my_video_title,my_video_cover in myvideo %}
+                                <div>
+                                    <a href="#">
+                                        <img src="{% static "" %}covers/image{{ my_video_cover.0 }}"
+                                             alt="video_cover">
+                                    </a>
+                                    <label for="videoCover">
+                                        {{ my_video_title.0 }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
                     <hr>
                     <div id="my-channel">

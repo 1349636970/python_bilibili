@@ -1,4 +1,5 @@
 import logging
+import os
 import re
 import uuid
 
@@ -24,7 +25,6 @@ def login(request):
             auth.login(request, user)
             return redirect('/backstage/')
         else:
-
             return redirect('/login/')
     else:
         return render(request, "bilibili/login.html",
@@ -51,42 +51,55 @@ def register(request):
 
 
 def backstage(request):
-    if request.user.is_authenticated:
-        return render(request, "bilibili/backstage.html", {
-            "type_page": "backstage_main"
-        })
-    else:
-        return redirect('/login')
+    allData = models.BilibiliFile.objects.all()
+    myVideoTitle = allData.filter(userId=request.user.id).values_list('title')
+    myVideoCover = allData.filter(userId=request.user.id).values_list('uuid')
+    myVideo = zip(myVideoTitle, myVideoCover)
+    return render(request, "bilibili/backstage.html", {
+        "type_page": "backstage_main",
+        "myvideo": myVideo
+    })
 
 
 def logout_view(request):
     logout(request)
-    websiteURL = request.GET.get('website')
-    return redirect(websiteURL)
+    websiteurl = request.GET.get('website')
+    return redirect(websiteurl)
 
 
 def uploadvideos(request):
-    if request.user.is_authenticated:
-        return render(request, 'bilibili/uploadVideo.html',
-                      {"title": "Welcome to Upload Video", "path": "/transfer/",
-                       "type_page": "uploadvideos"})
-    else:
-        return redirect('/login')
+    return render(request, 'bilibili/uploadVideo.html',
+                  {"title": "Welcome to Upload Video", "path": "/transfer/",
+                   "type_page": "uploadvideos"})
 
 
 def transfer_station(request):
-    video_files = request.FILES.get('video')
+    video_files = request.FILES.get('videoFile')
     video_title = request.POST.get('VideoTitle')
     video_description = request.POST.get("VideoDescription")
     video_userid = request.POST.get("userID")
+    video_cover = request.FILES.get("videoCover")
     video_uuid = str(uuid.uuid4())
     dir_bilibili_file = {'title': video_title, 'description': video_description, 'userId': video_userid,
-                         'uuid': video_uuid, 'upload': video_files}
+                         'uuid': video_uuid, 'uploadVideoFile': video_files, 'uploadVideoCover': video_cover}
     models.BilibiliFile.objects.create(**dir_bilibili_file)
-    return HttpResponse("success")
+
+    return redirect("/backstage")
 
 
 def backstage_favorite(request):
     return render(request, "bilibili/backstage.html", {
         "type_page": "backstage_favorite"
     })
+
+def backstage_myvideo(request):
+#     code
+    pass
+
+def backstage_mychannel(request):
+#     code
+    pass
+
+def video_handle(request):
+    # code
+    pass

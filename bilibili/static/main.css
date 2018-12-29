@@ -121,7 +121,26 @@ body, html {
 }
 
 #my-video {
-    height: 120px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#my-video h3 {
+    width: 150px;
+}
+
+#my-video-container {
+    float: right;
+}
+
+#my-video div img {
+    width: 200px;
+    margin:0 10px 10px 0
+}
+
+#my-video div label {
+    display: block;
+    text-align: center;
 }
 
 #top-video-upload:hover {

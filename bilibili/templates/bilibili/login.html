@@ -31,7 +31,8 @@
             {% if type_page == 'register' %}
                 <div class="form-group">
                     <label for="exampleInputUsername11">Username</label>
-                    <input required name="username" minlength="8" maxlength="10" type="text" class="form-control" id="exampleInputUsername1"
+                    <input required name="username" minlength="8" maxlength="10" type="text" class="form-control"
+                           id="exampleInputUsername1"
                            placeholder="Username">
                 </div>
             {% endif %}
@@ -40,7 +41,8 @@
                     <label for="exampleInputPassword1">
                         Password
                     </label>
-                    <input required name="password" minlength="8" maxlength="10" type="password" class="form-control" id="exampleInputPassword1"
+                    <input required name="password" minlength="8" maxlength="10" type="password" class="form-control"
+                           id="exampleInputPassword1"
                            placeholder="Password">
 
                 {% else %}
@@ -64,7 +66,16 @@
         {% endif %}
 
         {% if type_page == "uploadvideos" %}
-            <input type="file" name="video">
+            <label for="exampleInputVideoFile">
+                Video File
+            </label>
+            <input type="file" accept="video/*,.mp4,.flv" name="videoFile">
+            <br>
+            <input name="userID" type="hidden" value="{{ request.user.id }}">
+            <label for="exampleInputVideoCover">
+                Video Cover
+            </label>
+            <input type="file" accept="image/*,jpeg,png" name="videoCover">
             <br>
             <input name="userID" type="hidden" value="{{ request.user.id }}">
         {% endif %}

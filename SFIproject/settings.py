@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import re
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'bilibili.middleware.UserIdentification.UserLoginRequest',
 ]
 
 ROOT_URLCONF = 'SFIproject.urls'
@@ -120,7 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = '../videos'
 
 # Other setting
 AUTH_USER_MODEL = 'bilibili.BilibiliUser'
@@ -128,3 +130,11 @@ AUTH_USER_MODEL = 'bilibili.BilibiliUser'
 AUTHENTICATION_BACKENDS = (
         'django.contrib.auth.backends.ModelBackend',
     )
+FILE_UPLOAD_PERMISSIONS = 0o755
+
+NOT_REQUEST_LOGIN_URL = (
+    '/login/',
+    '/register/',
+    '/',
+    r'video/.+'
+)
