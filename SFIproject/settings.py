@@ -133,8 +133,8 @@ AUTHENTICATION_BACKENDS = (
 FILE_UPLOAD_PERMISSIONS = 0o755
 
 NOT_REQUEST_LOGIN_URL = (
-    '/login/',
-    '/register/',
-    '/',
-    r'video/.+'
+    '^login/$',
+    '^register/$',
+    r'^$',
+    r'^video/.+$'
 )

@@ -14,16 +14,10 @@ class UserLoginRequest:
         for url in settings.NOT_REQUEST_LOGIN_URL:
             url_list.append(re.compile(url.lstrip('/')))
         response = self.get_response(request)
-        path = request.path_info.lstrip('/')
-        results = []
-        for url in url_list:
-            results.append(url.match(path))
-        """if not request.user.is_authenticated:
-            if not any(result):
+        if not request.user.is_authenticated:
+            if not any(url.match(request.path_info.lstrip('/')) for url in url_list):
                 return redirect('/login/')
             else:
                 return response
         else:
             return response
-            """
-        return HttpResponse(any(result for result in results))
